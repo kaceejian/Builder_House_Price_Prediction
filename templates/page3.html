@@ -44,6 +44,101 @@
     </div>
   </nav>
 
+  <div class="container">
+  
+    <h2>Price Prediction
+    </h2>
+    <hr>
+
+    <div class="row" >
+      <div class="col-md-6">
+
+        <form method="POST" action="/model" role="form", name="petform">
+
+          <div class="form-group">
+              <label for="inputName">RoofMatl</label>
+              <input type="text" class="form-control" id="inputRoofMatl" name="RoofMatl" placeholder="RoofMatl">
+          </div>
+          <br>
+          <div class="form-group">
+              <label for="inputLat">Condition2</label>
+              <input type="text" class="form-control" id="inputCondition2" name="Condition2" placeholder="Condition2">
+          </div>
+
+          <br>
+          <div class="form-group">
+              <label for="inputLat">GarageQual</label>
+              <input type="text" class="form-control" id="GarageQual" name="GarageQual" placeholder="GarageQual">
+          </div>
+
+          <br>
+          <div class="form-group">
+              <label for="inputLat">SaleType</label>
+              <input type="text" class="form-control" id="SaleType" name="SaleType" placeholder="SaleType">
+          </div>
+
+          <br>
+          <div class="form-group">
+              <label for="inputLat">Area GarageQual</label>
+              <input type="text" class="form-control" id="GarageQual" name="GarageQual" placeholder="GarageQual">
+          </div>
+
+          <br>
+          <div class="form-group">
+              <label for="inputLat">Exterior2nd</label>
+              <input type="text" class="form-control" id="Exterior2nd" name="Exterior2nd" placeholder="Exterior2nd">
+          </div>
+
+          <br>
+          <div class="form-group">
+              <label for="inputLat">Exterior1st</label>
+              <input type="text" class="form-control" id="Exterior1st" name="Exterior1st" placeholder="Exterior1st">
+          </div>
+
+          <br>
+          <div class="form-group">
+              <label for="inputLat">SaleCondition</label>
+              <input type="text" class="form-control" id="SaleCondition" name="SaleCondition" placeholder="SaleCondition">
+          </div>
+
+          <br>
+          <div class="form-group">
+              <label for="inputLat">RoofStyle</label>
+              <input type="text" class="form-control" id="RoofStyle" name="RoofStyle" placeholder="RoofStyle">
+          </div>
+
+          <br>
+          <div class="form-group">
+              <label for="inputLat">Functional</label>
+              <input type="text" class="form-control" id="Functional" name="Functional" placeholder="Functional">
+          </div>
+
+          <br>
+          <div class="form-group">
+              <label for="inputLat">Neighborhood</label>
+              <input type="text" class="form-control" id="Neighborhood" name="Neighborhood" placeholder="Neighborhood">
+          </div>
+
+          <br>
+          <input type="submit" value="Submit" class="btn btn-primary">
+
+        </form>
+
+      </div>
+
+      <div class="col-md-6">
+
+        {% if prediction %} 
+          <div class="prediction">
+            Your predicted price is: {{prediction}}
+          </div>
+        {% endif %}
+
+      </div>
+
+    </div>
+  </div>
+
   <!-- The div that holds our map -->
   <div id="map"></div>
   <!-- Leaflet JS -->
