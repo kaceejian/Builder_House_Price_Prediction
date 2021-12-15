@@ -12,6 +12,7 @@ app = Flask(__name__)
 # Database Setup
 #################################################
 
+
 from sqlalchemy import create_engine
 from config import username, password, host, port, database
 connection_string = f'{username}:{password}@{host}:{port}/{database}'
@@ -23,6 +24,14 @@ engine = create_engine(f'postgresql://{connection_string}')
 @app.route("/")
 def index(): 
     return render_template("index.html")
+
+@app.route("/page2")
+def page2(): 
+    return render_template("page2.html")
+
+@app.route("/page3")
+def page3(): 
+    return render_template("page3.html")
 
 @app.route("/prediction")
 def prediction():
