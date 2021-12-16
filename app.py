@@ -127,7 +127,7 @@ def model():
 
      prediction = loaded_model.predict(df1)
 
-     prediction = "${0:,.2f}".format(prediction)
+     prediction = "${0:,.2f}".format(prediction[0])
      print(prediction)
 
      return render_template("page3.html", prediction = prediction)
