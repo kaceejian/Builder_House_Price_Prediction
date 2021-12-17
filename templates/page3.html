@@ -44,22 +44,196 @@
     </div>
   </nav>
 
-  <form name="form1" id="form1" action="/action_page.php">
-Subjects: <select name="subject" id="subject">
-    <option value="" selected="selected">Select subject</option>
-  </select>
-  <br><br>
-Topics: <select name="topic" id="topic">
-    <option value="" selected="selected">Please select subject first</option>
-  </select>
-  <br><br>
-Chapters: <select name="chapter" id="chapter">
-    <option value="" selected="selected">Please select topic first</option>
-  </select>
-  <br><br>
-  <input type="submit" value="Submit">  
-</form>
+  <div class="container">
+  
+    <h2>Price Prediction
+    </h2>
+    <hr>
 
+    <div class="row" >
+      <div class="col-md-6">
+
+        <form method="POST" action="/model" role="form", name="petform">
+
+          <div class = "form-group">
+            <div class="inputLat"><label for="RoofMatl">RoofMatl: </label></div>
+            <select name="RoofMatl" id="RoofMatl" class="select">
+                <option value="CompShg">CompShg</option>
+                <option value="WdShngl">WdShngl</option>
+                <option value="Metal">Metal</option>
+                <option value="WdShake">WdShake</option>
+                <option value="Membran">Membran</option>
+                <option value="Tar&Grv">Tar&Grv</option>
+                <option value="Roll">Roll</option>
+                <option value="ClyTile">ClyTile</option>
+            </select>
+            </div>
+
+          <div class = "form-group">
+            <div class="inputLat"><label for="Condition2">Condition2: </label></div>
+            <select name="Condition2" id="Condition2" class="select">
+                <option value="Norm">Norm</option>
+                <option value="Artery">Artery</option>
+                <option value="RRNn">RRNn</option>
+                <option value="PosN">PosN</option>
+                <option value="PosA">PosA</option>
+                <option value="RRAn">RRAn</option>
+                <option value="RRAe">RRAe</option>
+            </select>
+            </div>
+
+          <div class = "form-group">
+            <div class="inputLat"><label for="RoofMatl">GarageQual: </label></div>
+            <select name="GarageQual" id="GarageQual" class="select">
+                <option value="TA">TA</option>
+                <option value="Fa">Fa</option>
+                <option value="Gd">Gd</option>
+                <option value="Po">Po</option>
+            </select>
+            </div>
+
+          <div class = "form-group">
+            <div class="inputLat"><label for="SaleType">SaleType: </label></div>
+            <select name="SaleType" id="SaleType" class="select">
+                <option value="WD">WD</option>
+                <option value="New">New</option>
+                <option value="ConLD">ConLD</option>
+                <option value="ConLI">ConLI</option>
+                <option value="CWD">CWD</option>
+                <option value="ConLw">ConLw</option>
+                <option value="Con">Con</option>
+                <option value="Oth">Oth</option>
+            </select>
+            </div>
+
+          <div class = "form-group">
+            <div class="Exterior2nd"><label for="Exterior2nd">Exterior2nd: </label></div>
+            <select name="Exterior2nd" id="Exterior2nd" class="select">
+                <option value="VinylSd">VinylSd</option>
+                <option value="MetalSd">MetalSd</option>
+                <option value="Wd Shng">Wd Shng</option>
+                <option value="HdBoard">WHdBoard</option>
+                <option value="Plywood">Plywood</option>
+                <option value="Wd Sdng">Wd Sdng</option>
+                <option value="CmentBd">CmentBd</option>
+                <option value="BrkFace">BrkFace</option>
+                <option value="Stucco">Stucco</option>
+                <option value="AsbShng">AsbShng</option>
+                <option value="Brk Cmn">Brk Cmn</option>
+                <option value="ImStucc">ImStucc</option>
+                <option value="AsphShn">AsphShn</option>
+                <option value="Stone">Stone</option>
+                <option value="Other">Other</option>
+                <option value="CBlock">CBlock</option>
+            </select>
+            </div>
+
+          <div class = "form-group">
+            <div class="inputLat"><label for="Exterior1st">Exterior1st: </label></div>
+            <select name="Exterior1st" id="Exterior1st" class="select">
+              <option value="VinylSd">VinylSd</option>
+              <option value="MetalSd">MetalSd</option>
+              <option value="Wd Shng">Wd Shng</option>
+              <option value="HdBoard">WHdBoard</option>
+              <option value="BrkFace">BrkFace</option>
+              <option value="WdShing">WdShing</option>
+              <option value="CmentBd">CmentBd</option>
+              <option value="Plywood">Plywood</option>
+              <option value="AsbShng">AsbShng</option>
+              <option value="Stucco">Stucco</option>
+              <option value="BrkComn">BrkComm</option>
+              <option value="AsphShn">AsphShn</option>
+              <option value="Stone">Stone</option>
+              <option value="ImStucc">ImStucc</option>
+              <option value="CBlock">CBlock</option>
+            </select>
+            </div>
+
+
+          <div class = "form-group">
+            <div class="inputLat"><label for="SaleCondition">SaleCondition: </label></div>
+            <select name="SaleCondition" id="SaleCondition" class="select">
+                <option value="Normal">Normal</option>
+                <option value="Partial">Partial</option>
+                <option value="AdjLand">AdjLand</option>
+                <option value="Alloca">Alloca</option>
+                <option value="Family">TFamily</option>
+            </select>
+            </div>
+
+          <div class = "form-group">
+            <div class="inputLat"><label for="RoofStyle">RoofStyle: </label></div>
+            <select name="RoofStyle" id="RoofStyle" class="select">
+                <!-- <option value="Gable">Gable</option> -->
+                <option value="Hip">Hip</option>
+                <option value="Gambrel">Gambrel</option>
+                <option value="Mansard">Mansard</option>
+                <option value="Shed">Shed</option>
+            </select>
+            </div>
+
+          <div class = "form-group">
+            <div class="inputLat"><label for="Functional">Functional: </label></div>
+            <select name="Functional" id="Functional" class="select">
+                <option value="Typ">Typ</option>
+                <option value="Min1">Min1</option>
+                <option value="Min2">Min2</option>
+                <option value="Mod">Mod</option>
+                <option value="Maj2">Maj2</option>
+                <option value="Sev">Sev</option>
+            </select>
+            </div>
+
+          <div class = "form-group">
+            <div class="inputLat"><label for="Neighborhood">Neighborhood: </label></div>
+            <select name="Neighborhood" id="Neighborhood" class="select">
+                <option value="CollgCr">CollgCr</option>
+                <option value="Veenker">Veenker</option>
+                <option value="Crawfor">Crawfor</option>
+                <option value="NoRidge">NoRidge</option>
+                <option value="Mitchel">Mitchel</option>
+                <option value="Somerst">Somerst</option>
+                <option value="NWAmes">NWAmes</option>
+                <option value="OldTown">OldTown</option>
+                <option value="BrkSide">BrkSide</option>
+                <option value="Sawyer">Sawyer</option>
+                <option value="NridgHt">NridgHt</option>
+                <option value="NAmes">NAmes</option>
+                <option value="SawyerW">SawyerW</option>
+                <option value="IDOTRR">IDOTRR</option>
+                <option value="MeadowV">MeadowV</option>
+                <option value="Edwards">Edwards</option>
+                <option value="Timber">Timber</option>
+                <option value="Gilbert">Gilbert</option>
+                <option value="StoneBr">StoneBr</option>
+                <option value="ClearCr">ClearCr</option>
+                <option value="NPkVill">NPkVill</option>
+                <option value="Blmngtn">Blmngtn</option>
+                <option value="BrDale">BrDale</option>
+                <option value="Blueste">Blueste</option>
+            </select>
+            </div>
+
+
+          <br>
+          <input type="submit" value="Submit" class="btn btn-primary">
+
+        </form>
+
+      </div>
+
+      <div class="col-md-6">
+
+        {% if prediction %} 
+          <div class="prediction">
+            Your predicted price is: {{prediction}}
+          </div>
+        {% endif %}
+
+      </div>
+
+    </div>
+  </div>
 
   <!-- The div that holds our map -->
   <div id="map"></div>
