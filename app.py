@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, render_template, request, redirect, url_for
 import pandas as pd 
-import json 
-import psycopg2
+# import json 
+# import psycopg2
 import pickle
 import numpy as np
 from sklearn.utils import check_array
