@@ -3,7 +3,7 @@
 ## Teammates:
 
 - Ricky
-- Ehizogie
+- E
 - Kacee Kira
 
 ## Purpose/Overview:
