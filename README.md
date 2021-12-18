@@ -69,12 +69,22 @@ https://www.kaggle.com/c/neolen-house-price-prediction/data
 
 ### -> Machine Learning Models:
 
-> Model 1: 16. From the latest dataframe, identify X and y. 17. Split the data into X_train, X_test, y_train, y_test. 18. Run Linear Regression. The report showed:
+Model 1:
+
+16. From the latest dataframe, identify X and y.
+17. Split the data into X_train, X_test, y_train, y_test.
+18. Run Linear Regression. The report showed:
 
 - Root mean squared error: 34854.74
 - Coefficient of determination: 0.72
 
-> Model 2: 19. For the purpose of making the website input page, we decided to retrain the model again with the most important features. Use coefficient to find out the most important features. 20. Find out the normalized coefficient values. 21. Select the top 10 columns that have the highest coefficients. 22. Retrain the model with the top 10 columns, which have 97 features (sub-categories) in total. 23. Run Linear Regression. The report this time showed:
+Model 2:
+
+19. For the purpose of making the website input page, we decided to retrain the model again with the most important features. Use coefficient to find out the most important features.
+20. Find out the normalized coefficient values.
+21. Select the top 10 columns that have the highest coefficients.
+22. Retrain the model with the top 10 columns, which have 97 features (sub-categories) in total.
+23. Run Linear Regression. The report this time showed:
 
 - Root mean squared error: 46194.08
 - Retrain Coefficient of determination: 0.52
