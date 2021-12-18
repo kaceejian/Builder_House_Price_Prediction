@@ -6,7 +6,7 @@
 - Ehizogie
 - Kacee Kira
 
-## Purpose:
+## Purpose/Overview:
 
 What’s your home worth? Estimating the value of a property is necessary for many different reasons, including financing, sales, property insurance. And the simple answer to your home worth is the purchase price. Each real estate has unique features such as location, size, and other features which make up the home price. Therefore, the home price is an essential factor in selling a house.
 With realistic variables such as Roof material, Proximity to various conditions, Garage quality, Type of Sale, Exterior covering on the house (if more than one material), Exterior covering on house, Sale condition, Type of roof, Home functionality rating, and Physical locations within Ames city limits, we can predict the price of a home in Ames, Iowa. Our goal is to assist you in making renovation plans to compete in today’s market using a linear regression model.
