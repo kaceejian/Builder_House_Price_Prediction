@@ -2,9 +2,9 @@
 
 ## Teammates:
 
-Ricky
-Ehizogie
-Kacee Kira
+- Ricky
+- Ehizogie
+- Kacee Kira
 
 ## Purpose:
 
@@ -40,7 +40,7 @@ https://www.kaggle.com/c/neolen-house-price-prediction/data
 > DATA CLEANING / TRANSFORMATION / FEATURE SELECTION / MODEL TRAINING & RESULTS /
 > by doing the following steps:
 
-> ### ---> Check overall correlation:
+### -> Check overall correlation:
 
 1. Run correlation between all features and SalePrice column,drop low correlation features.
 2. Identify and drop columns that have too many null values (columns that have more than 1000 null values), which are not useful data for what we're trying to predict.
@@ -48,34 +48,36 @@ https://www.kaggle.com/c/neolen-house-price-prediction/data
 4. Identify the correlation again between the columns with low null values and SalePrice.
 5. Drop columns with correlations that are lower than 0.05 and save the remaining columns into a new dataframe that represents columns have have high correlation with SalePrice.
 
-> ### ---> Clean Numeric Columns:
->
-> 6. Select numeric columns from the above new high correlation dataframe and plot histograms
-> 7. From the plots, we can see that the LotArea plot shows that there are not too many houses that have a lot size value that is more than 50,000.
-> 8. Based on this finding, we cut off the outliers of Lot Areas that are above 50,000 and save the data to a new dataframe.
+### -> Clean Numeric Columns:
 
-> ### ---> Clean Categorical columns:
->
-> 9. From the above new dataframe, select columns that are categorical only.
-> 10. Group by each column to see the average SalePrice.
-> 11. Find out how many levels are in each column. Check if there're columns with a single level. There was none.
-> 12. Estimate the correlation for each column with SalePrice.
-> 13. Drop the low correlation column with a threshold of 0.15.
+6. Select numeric columns from the above new high correlation dataframe and plot histograms
+7. From the plots, we can see that the LotArea plot shows that there are not too many houses that have a lot size value that is more than 50,000.
+8. Based on this finding, we cut off the outliers of Lot Areas that are above 50,000 and save the data to a new dataframe.
 
-> ### ---> Dummification:
->
-> 14. Dummify the dataframe.
-> 15. Check if there are any null values and fill na with average value.
+### -> Clean Categorical columns:
 
-> ### ---> Machine Learning Models:
->
+9.  From the above new dataframe, select columns that are categorical only.
+10. Group by each column to see the average SalePrice.
+11. Find out how many levels are in each column. Check if there're columns with a single level. There was none.
+12. Estimate the correlation for each column with SalePrice.
+13. Drop the low correlation column with a threshold of 0.15.
+
+### -> Dummification:
+
+14. Dummify the dataframe.
+15. Check if there are any null values and fill na with average value.
+
+### -> Machine Learning Models:
+
 > Model 1: 16. From the latest dataframe, identify X and y. 17. Split the data into X_train, X_test, y_train, y_test. 18. Run Linear Regression. The report showed:
-> Root mean squared error: 34854.74
-> Coefficient of determination: 0.72
+
+- Root mean squared error: 34854.74
+- Coefficient of determination: 0.72
 
 > Model 2: 19. For the purpose of making the website input page, we decided to retrain the model again with the most important features. Use coefficient to find out the most important features. 20. Find out the normalized coefficient values. 21. Select the top 10 columns that have the highest coefficients. 22. Retrain the model with the top 10 columns, which have 97 features (sub-categories) in total. 23. Run Linear Regression. The report this time showed:
-> Root mean squared error: 46194.08
-> Retrain Coefficient of determination: 0.52
+
+- Root mean squared error: 46194.08
+- Retrain Coefficient of determination: 0.52
 
 ---
 
