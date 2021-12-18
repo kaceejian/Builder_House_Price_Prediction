@@ -35,11 +35,11 @@
           <a class="nav-link" href="/page2">Visualization</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/page3">Pricing <span class="sr-only">(current)</span></a>
-        </li>
+          <a class="nav-link" href="/page3">Price Prediction<span class="sr-only">(current)</span></a>
+        <!-- </li>
         <li class="nav-item">
           <a class="nav-link disabled">Disabled</a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </nav>
@@ -56,108 +56,108 @@
         <form method="POST" action="/model" role="form", name="petform">
 
           <div class = "form-group">
-            <div class="inputLat"><label for="RoofMatl">RoofMatl: </label></div>
+            <div class="inputLat"><label for="RoofMatl">Roof Material: </label></div>
             <select name="RoofMatl" id="RoofMatl" class="select">
-                <option value="CompShg">CompShg</option>
-                <option value="WdShngl">WdShngl</option>
+                <option value="CompShg">Standard (Composite) Shingle</option>
+                <option value="WdShngl">Wood Shingles</option>
                 <option value="Metal">Metal</option>
-                <option value="WdShake">WdShake</option>
-                <option value="Membran">Membran</option>
-                <option value="Tar&Grv">Tar&Grv</option>
+                <option value="WdShake">Wood Shakes</option>
+                <option value="Membran">Membrane</option>
+                <option value="Tar&Grv">Gravel & Tar</option>
                 <option value="Roll">Roll</option>
-                <option value="ClyTile">ClyTile</option>
+                <option value="ClyTile">Clay or Tile</option>
             </select>
             </div>
 
           <div class = "form-group">
-            <div class="inputLat"><label for="Condition2">Condition2: </label></div>
+            <div class="inputLat"><label for="Condition2">Proximity to various conditions: </label></div>
             <select name="Condition2" id="Condition2" class="select">
-                <option value="Norm">Norm</option>
-                <option value="Artery">Artery</option>
-                <option value="RRNn">RRNn</option>
-                <option value="PosN">PosN</option>
-                <option value="PosA">PosA</option>
-                <option value="RRAn">RRAn</option>
-                <option value="RRAe">RRAe</option>
+                <option value="Norm">Normal	</option>
+                <option value="Artery">Adjacent to arterial street</option>
+                <option value="RRNn">Within 200' of North-South Railroad</option>
+                <option value="PosN">Near positive off-site feature--park, greenbelt, etc.</option>
+                <option value="PosA">Adjacent to postive off-site feature</option>
+                <option value="RRAn">Adjacent to North-South Railroad</option>
+                <option value="RRAe">Adjacent to East-West Railroad</option>
             </select>
             </div>
 
           <div class = "form-group">
-            <div class="inputLat"><label for="RoofMatl">GarageQual: </label></div>
+            <div class="inputLat"><label for="RoofMatl">Garage quality: </label></div>
             <select name="GarageQual" id="GarageQual" class="select">
-                <option value="TA">TA</option>
-                <option value="Fa">Fa</option>
-                <option value="Gd">Gd</option>
-                <option value="Po">Po</option>
+                <option value="Gd">Good</option>
+                <option value="Fa">Fair</option>
+                <option value="TA">Typical/Average</option>
+                <option value="Po">Poor</option>
             </select>
             </div>
 
           <div class = "form-group">
-            <div class="inputLat"><label for="SaleType">SaleType: </label></div>
+            <div class="inputLat"><label for="SaleType">Type of sale: </label></div>
             <select name="SaleType" id="SaleType" class="select">
-                <option value="WD">WD</option>
-                <option value="New">New</option>
-                <option value="ConLD">ConLD</option>
-                <option value="ConLI">ConLI</option>
-                <option value="CWD">CWD</option>
-                <option value="ConLw">ConLw</option>
-                <option value="Con">Con</option>
-                <option value="Oth">Oth</option>
+                <option value="WD">Warranty Deed - Conventional</option>
+                <option value="New">Home just constructed and sold</option>
+                <option value="ConLD">Contract Low Down</option>
+                <option value="ConLI">Contract Low Interest</option>
+                <option value="CWD">Warranty Deed - Cash</option>
+                <option value="ConLw">Contract Low Down payment and low interest</option>
+                <option value="Con">Contract 15% Down payment regular terms</option>
+                <option value="Oth">Other</option>
             </select>
             </div>
 
           <div class = "form-group">
-            <div class="Exterior2nd"><label for="Exterior2nd">Exterior2nd: </label></div>
+            <div class="Exterior2nd"><label for="Exterior2nd">Exterior covering on house (if more than one material): </label></div>
             <select name="Exterior2nd" id="Exterior2nd" class="select">
-                <option value="VinylSd">VinylSd</option>
-                <option value="MetalSd">MetalSd</option>
-                <option value="Wd Shng">Wd Shng</option>
-                <option value="HdBoard">WHdBoard</option>
+                <option value="VinylSd">Vinyl Siding</option>
+                <option value="MetalSd">Metal Siding</option>
+                <option value="Wd Shng">Wood Siding</option>
+                <option value="HdBoard">Hard Board</option>
                 <option value="Plywood">Plywood</option>
-                <option value="Wd Sdng">Wd Sdng</option>
-                <option value="CmentBd">CmentBd</option>
-                <option value="BrkFace">BrkFace</option>
+                <option value="Wd Sdng">Wood Siding</option>
+                <option value="CmentBd">Cement Board</option>
+                <option value="BrkFace">Brick Face</option>
                 <option value="Stucco">Stucco</option>
-                <option value="AsbShng">AsbShng</option>
-                <option value="Brk Cmn">Brk Cmn</option>
-                <option value="ImStucc">ImStucc</option>
-                <option value="AsphShn">AsphShn</option>
+                <option value="AsbShng">Asbestos Shingles</option>
+                <option value="Brk Cmn">Brick Common</option>
+                <option value="ImStucc">Imitation Stucco</option>
+                <option value="AsphShn">Asphalt Shingles</option>
                 <option value="Stone">Stone</option>
                 <option value="Other">Other</option>
-                <option value="CBlock">CBlock</option>
+                <option value="CBlock">Cinder Block</option>
             </select>
             </div>
 
           <div class = "form-group">
-            <div class="inputLat"><label for="Exterior1st">Exterior1st: </label></div>
+            <div class="inputLat"><label for="Exterior1st">Exterior covering on house: </label></div>
             <select name="Exterior1st" id="Exterior1st" class="select">
-              <option value="VinylSd">VinylSd</option>
-              <option value="MetalSd">MetalSd</option>
-              <option value="Wd Shng">Wd Shng</option>
-              <option value="HdBoard">WHdBoard</option>
-              <option value="BrkFace">BrkFace</option>
-              <option value="WdShing">WdShing</option>
-              <option value="CmentBd">CmentBd</option>
+              <option value="VinylSd">Vinyl Siding</option>
+              <option value="MetalSd">Metal Siding</option>
+              <option value="Wd Shng">Wood Siding</option>
+              <option value="HdBoard">Hard Board</option>
+              <option value="BrkFace">Brick Face</option>
+              <option value="WdShing">Wood Shingles</option>
+              <option value="CmentBd">Cement Board</option>
               <option value="Plywood">Plywood</option>
-              <option value="AsbShng">AsbShng</option>
+              <option value="AsbShng">Asbestos Shingles</option>
               <option value="Stucco">Stucco</option>
-              <option value="BrkComn">BrkComm</option>
-              <option value="AsphShn">AsphShn</option>
+              <option value="BrkComn">Brick Common</option>
+              <option value="AsphShn">Asphalt Shingles</option>
               <option value="Stone">Stone</option>
-              <option value="ImStucc">ImStucc</option>
-              <option value="CBlock">CBlock</option>
+              <option value="ImStucc">Imitation Stucco</option>
+              <option value="CBlock">Cinder Block</option>
             </select>
             </div>
 
 
           <div class = "form-group">
-            <div class="inputLat"><label for="SaleCondition">SaleCondition: </label></div>
+            <div class="inputLat"><label for="SaleCondition">Sale Condition: </label></div>
             <select name="SaleCondition" id="SaleCondition" class="select">
-                <option value="Normal">Normal</option>
-                <option value="Partial">Partial</option>
-                <option value="AdjLand">AdjLand</option>
-                <option value="Alloca">Alloca</option>
-                <option value="Family">TFamily</option>
+                <option value="Normal">Normal Sale</option>
+                <option value="Partial">Home was not completed when last assessed</option>
+                <option value="AdjLand">Adjoining Land Purchase</option>
+                <option value="Alloca">Allocation</option>
+                <option value="Family">Sale between family members</option>
             </select>
             </div>
 
@@ -166,51 +166,51 @@
             <select name="RoofStyle" id="RoofStyle" class="select">
                 <!-- <option value="Gable">Gable</option> -->
                 <option value="Hip">Hip</option>
-                <option value="Gambrel">Gambrel</option>
+                <option value="Gambrel">Gambrel(Barn)</option>
                 <option value="Mansard">Mansard</option>
                 <option value="Shed">Shed</option>
             </select>
             </div>
 
           <div class = "form-group">
-            <div class="inputLat"><label for="Functional">Functional: </label></div>
+            <div class="inputLat"><label for="Functional">Home functionality: </label></div>
             <select name="Functional" id="Functional" class="select">
-                <option value="Typ">Typ</option>
-                <option value="Min1">Min1</option>
-                <option value="Min2">Min2</option>
-                <option value="Mod">Mod</option>
-                <option value="Maj2">Maj2</option>
-                <option value="Sev">Sev</option>
+                <option value="Typ">Typical Functionality</option>
+                <option value="Min1">Minor Deductions 1</option>
+                <option value="Min2">Minor Deductions 2</option>
+                <option value="Mod">Moderate Deductions</option>
+                <option value="Maj2">Major Deductions 2</option>
+                <option value="Sev">Severely Damaged</option>
             </select>
             </div>
 
           <div class = "form-group">
             <div class="inputLat"><label for="Neighborhood">Neighborhood: </label></div>
             <select name="Neighborhood" id="Neighborhood" class="select">
-                <option value="CollgCr">CollgCr</option>
+                <option value="CollgCr">College Creek</option>
                 <option value="Veenker">Veenker</option>
-                <option value="Crawfor">Crawfor</option>
-                <option value="NoRidge">NoRidge</option>
+                <option value="Crawfor">Crawford</option>
+                <option value="NoRidge">Northridge</option>
                 <option value="Mitchel">Mitchel</option>
-                <option value="Somerst">Somerst</option>
-                <option value="NWAmes">NWAmes</option>
-                <option value="OldTown">OldTown</option>
-                <option value="BrkSide">BrkSide</option>
+                <option value="Somerst">Somerset</option>
+                <option value="NWAmes">Northwest Ames</option>
+                <option value="OldTown">Old Town</option>
+                <option value="BrkSide">Brookside</option>
                 <option value="Sawyer">Sawyer</option>
-                <option value="NridgHt">NridgHt</option>
-                <option value="NAmes">NAmes</option>
-                <option value="SawyerW">SawyerW</option>
-                <option value="IDOTRR">IDOTRR</option>
-                <option value="MeadowV">MeadowV</option>
+                <option value="NridgHt">Northridge Heights</option>
+                <option value="NAmes">Northwest Ames</option>
+                <option value="SawyerW">Sawyer West</option>
+                <option value="IDOTRR">Iowa DOT and Rail Road</option>
+                <option value="MeadowV">Meadow Village</option>
                 <option value="Edwards">Edwards</option>
                 <option value="Timber">Timber</option>
                 <option value="Gilbert">Gilbert</option>
-                <option value="StoneBr">StoneBr</option>
-                <option value="ClearCr">ClearCr</option>
-                <option value="NPkVill">NPkVill</option>
-                <option value="Blmngtn">Blmngtn</option>
-                <option value="BrDale">BrDale</option>
-                <option value="Blueste">Blueste</option>
+                <option value="StoneBr">Stone Brook</option>
+                <option value="ClearCr">Clear Creek</option>
+                <option value="NPkVill">Northpark Villa</option>
+                <option value="Blmngtn">Bloomington Heights</option>
+                <option value="BrDale">Briardale</option>
+                <option value="Blueste">Bluestem</option>
             </select>
             </div>
 
